@@ -63,3 +63,36 @@ main {
     border-bottom: 1px solid #e9ecef;
 }
 
+button {
+    min-width: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    font-family: inherit;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+i {
+    font-size: 17px;
+    color: #a1a1a0;
+}
+
+.fa-square {
+    margin-right: 15px;
+}
+
+#remove-completed {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    color: #a1a1a0;
+    margin: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #f5f3f4;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}

@@ -45,3 +45,21 @@ main {
     color: #a5a58d;
     font-style: italic;
 }
+
+#todo {
+    width: 100%;
+    min-height: 67px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-weight: 300;
+}
+
+#todo li {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e9ecef;
+}
+

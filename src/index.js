@@ -22,3 +22,5 @@ let todoList = [
         index: 0,
     },
 ];
+
+localStorage.setItem('todo', JSON.stringify(todoList));

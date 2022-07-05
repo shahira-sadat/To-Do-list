@@ -1,10 +1,11 @@
 # Microverse-to-do-list
-![Screenshot]()
+<img width="861" alt="Screen Shot 2022-07-05 at 9 56 41 PM" src="https://user-images.githubusercontent.com/53530780/177383268-451af7bc-ec8d-454e-851e-c809cf1c2f96.png">
+
 > A simple ToDo list app using ES6 and webpack. This is a Microverse project.
 
 ## Live Demo
 
-[Live Demo Link](link here)
+Can check the live demo [here](https://shahira-sadat.github.io/To-Do-list/)
 
 ## Built With
 - HTML5
@@ -29,7 +30,7 @@ clone the repo or download from https://github.com/shahira-sadat/To-Do-list
 npm install
 
 
-### Build the app'
+### Build the app
 
 npm run build
 

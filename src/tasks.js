@@ -19,5 +19,12 @@ export default class Tasks {
             todoContainer.insertBefore(li, todoContainer.children[task.index]);
         });
 
+        const deleteBtn = document.querySelectorAll('.delete-task');
+        deleteBtn.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                this.remove(index);
+            });
+        });
+
     }
 }

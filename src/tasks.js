@@ -40,7 +40,33 @@ export default class Tasks {
             });
         });
     }
-
-
+    
+    add = (value) => {
+        const newTask = {
+            description: value,
+            isCompleted: false,
+            index: this.tasksArray.length,
+        };
+        this.tasksArray.push(newTask);
+        localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
+        this.populateList();
     }
+
+    update = (value, index) => {
+        this.tasksArray[index].description = value;
+        localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
+        this.populateList();
+    }
+
+    remove = (index) => {
+        this.tasksArray.splice(index, 1);
+        for (let i = 0; i < this.tasksArray.length; i += 1) {
+            this.tasksArray[i].index = i;
+        }
+        localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
+        this.populateList();
+    }
+} 
+
+    
 

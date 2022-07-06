@@ -1,4 +1,5 @@
 import './style.css';
+import Tasks from './tasks.js';
 
 let todoList = [
   {

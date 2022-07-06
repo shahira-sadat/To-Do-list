@@ -1,4 +1,5 @@
 export default class Status {
+    // complete tasks and update task status
     completeTask = (array) => {
         const checkboxes = document.querySelectorAll('.check-task');
         const todoTask = document.querySelectorAll('.todo-task');
@@ -11,6 +12,7 @@ export default class Status {
         });
     }
 
+    // clear the completed tasks
     clearCompleted = (array) => {
         const clearBtn = document.querySelector('#clear-completed');
         clearBtn.addEventListener('click', () => {

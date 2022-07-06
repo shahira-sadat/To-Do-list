@@ -14,16 +14,7 @@ export default class Tasks {
       this.tasksArray.forEach((task) => {
         const li = document.createElement('li');
         li.className = 'todo-task';
-        li.innerHTML 
-        = `<div><button class="check-task">
-          <i class="fa-regular fa-square"></i> 
-          <i class="fa-solid fa-check"></i>
-          </button> 
-          <input class="todo-input" type="text" value="${task.description}">
-          </div>
-          <button class="delete-task">
-          <i class="fa-solid fa-trash-can"></i>
-          </button>`;
+        li.innerHTML = `<div><button class="check-task"><i class="fa-regular fa-square"></i> <i class="fa-solid fa-check"></i></button> <input class="todo-input" type="text" value="${task.description}"></div><button class="delete-task"><i class="fa-solid fa-trash-can"></i></button>`;
         todoContainer.insertBefore(li, todoContainer.children[task.index]);
         if (task.isCompleted) {
           li.classList.add('active');
@@ -50,32 +41,31 @@ export default class Tasks {
           }
         });
       });
+
       // complete task and update status
       status.completeTask(this.tasksArray);
     }
 
-    add = (value) => {
+  add = (value) => {
       this.tasksArray.push({
         description: value,
         isCompleted: false,
         index: this.tasksArray.length,
-      });
-      localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
-      this.populateList();
+    });
+    localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
+    this.populateList();
+  }
+  update = (value, index) => {
+    this.tasksArray[index].description = value;
+    localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
+    this.populateList();
+  }
+  remove = (index) => {
+    this.tasksArray.splice(index, 1);
+    for (let i = 0; i < this.tasksArray.length; i += 1) {
+      this.tasksArray[i].index = i;
     }
-
-    update = (value, index) => {
-      this.tasksArray[index].description = value;
-      localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
-      this.populateList();
-    }
-
-    remove = (index) => {
-      this.tasksArray.splice(index, 1);
-      for (let i = 0; i < this.tasksArray.length; i += 1) {
-        this.tasksArray[i].index = i;
-      }
-      localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
-      this.populateList();
-    }
+    localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
+    this.populateList();
+  }
 }

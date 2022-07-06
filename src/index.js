@@ -26,7 +26,7 @@ let todoList = [
 localStorage.setItem('todo', JSON.stringify(todoList));
 
 const todoContainer = document.querySelector('#todo');
-const createList = () => {
+const populateList = () => {
   todoList = JSON.parse(localStorage.getItem('todo'));
   todoList.forEach((item) => {
     const li = document.createElement('li');
@@ -39,4 +39,4 @@ const createList = () => {
     todoContainer.insertBefore(li, todoContainer.children[item.index]);
   });
 };
-createList();
+populateList();

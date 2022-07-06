@@ -72,32 +72,34 @@ main {
 } */
 
 #todo-list li div {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .todo-input {
-    border : none;
-    outline : none;
-    font-size : 17 px;
-    font-family : inherit;
-    align-self : flex-start;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  font-family: inherit;
+  align-self: flex-start;
 }
+
 .fa-check {
-    display : none;
-    color : #38b000;
+  display: none;
+  color: #38b000;
 }
-.todo-task.active .fa-check{
-    display : block;
+
+.todo-task.active .fa-check {
+  display: block;
 }
-.todo-task.active .fa-square{
-    display : none;
+
+.todo-task.active .fa-square {
+  display: none;
 }
+
 .todo-task.active .todo-input {
-    text-decoration : line-through;
+  text-decoration: line-through;
 }
-
-
 
 button {
   min-width: 30px;
@@ -117,19 +119,18 @@ i {
 }
 
 #clear-completed {
-    width : 100%;
-    text-align : center;
-    cursor : pointer;
-    color : #a5a58d;
-    margin : 0;
-    padding : 15px;
-    box-sizing : border-box;
-    background-color : #f5f3f4;
-    border-bottom-left-radius : 8px;
-    border-bottom-right-radius : 8px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  color: #a5a58d;
+  margin: 0;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: #f5f3f4;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
-
 .move-task {
-    cursor : move;
+  cursor: move;
 }

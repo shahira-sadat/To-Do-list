@@ -2,7 +2,6 @@ import Status from './status.js';
 
 const status = new Status();
 
-
 export default class Tasks {
   constructor() {
     this.tasksArray = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -47,19 +46,21 @@ export default class Tasks {
     }
 
   add = (value) => {
-      this.tasksArray.push({
-        description: value,
-        isCompleted: false,
-        index: this.tasksArray.length,
+    this.tasksArray.push({
+      description: value,
+      isCompleted: false,
+      index: this.tasksArray.length,
     });
     localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
     this.populateList();
   }
+
   update = (value, index) => {
     this.tasksArray[index].description = value;
     localStorage.setItem('tasks', JSON.stringify(this.tasksArray));
     this.populateList();
   }
+
   remove = (index) => {
     this.tasksArray.splice(index, 1);
     for (let i = 0; i < this.tasksArray.length; i += 1) {

@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-Can check the live demo [here](https://shahira-sadat.github.io/To-Do-list/)
+Can check the live demo [here](https://shahira-sadat.github.io/To-Do-list/dist/index.html)
 
 ## Built With
 - HTML5

@@ -3,9 +3,8 @@ body {
   height: 100vh;
   background-color: #e9ecef;
   font-family: sans-serif;
-  box-sizing : border-box;
-  padding : 130px 0;
-
+  box-sizing: border-box;
+  padding: 130px 0;
 }
 
 main {
@@ -19,8 +18,7 @@ main {
   box-sizing: border-box;
   border-radius: 8px;
   box-shadow: rgba(90, 87, 87, 0.35) 0 6px 12px;
-  margin : 0 auto;
-
+  margin: 0 auto;
 }
 
 #header {
@@ -67,13 +65,11 @@ main {
 }
 
 .todo-item {
-    border : none;
-    outline : none;
-    font-size : 17px;
-    font-family : inherit;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  font-family: inherit;
 }
-
-
 
 button {
   min-width: 30px;

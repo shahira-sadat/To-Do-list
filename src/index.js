@@ -5,7 +5,6 @@ const tasks = new Tasks();
 
 tasks.populateList();
 
-
 const newInput = document.querySelector('#new-task');
 newInput.addEventListener('keypress', (e) => {
   if (e.key === 'Enter' && newInput.value) {
@@ -13,7 +12,6 @@ newInput.addEventListener('keypress', (e) => {
     newInput.value = '';
   }
 });
-
 
 const refreshBtn = document.querySelector('#refresh-list');
 refreshBtn.addEventListener('click', () => {

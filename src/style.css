@@ -66,6 +66,15 @@ main {
   border-bottom: 1px solid #e9ecef;
 }
 
+.todo-item {
+    border : none;
+    outline : none;
+    font-size : 17px;
+    font-family : inherit;
+}
+
+
+
 button {
   min-width: 30px;
   cursor: pointer;

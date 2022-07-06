@@ -1,19 +1,42 @@
 import './style.css';
-import Tasks from './tasks.js';
 
-const tasks = new Tasks();
+let todoList = [
+  {
+    description: 'Reading',
+    isCompleted: false,
+    index: 3,
+  },
+  {
+    description: 'Listening',
+    isCompleted: false,
+    index: 2,
+  },
+  {
+    description: 'Writing',
+    isCompleted: false,
+    index: 1,
+  },
+  {
+    description: 'Speaking',
+    isCompleted: false,
+    index: 0,
+  },
+];
 
-tasks.populateList();
+localStorage.setItem('todo', JSON.stringify(todoList));
 
-const newInput = document.querySelector('#new-task');
-newInput.addEventListener('keypress', (e) => {
-  if (e.key === 'Enter' && newInput.value) {
-    tasks.add(newInput.value);
-    newInput.value = '';
-  }
-});
-
-const refreshBtn = document.querySelector('#refresh-list');
-refreshBtn.addEventListener('click', () => {
-  document.location.reload();
-});
+const todoContainer = document.querySelector('#todo');
+const populateList = () => {
+  todoList = JSON.parse(localStorage.getItem('todo'));
+  todoList.forEach((item) => {
+    const li = document.createElement('li');
+    li.innerHTML = `<button class="check-item">
+            <i class="fa-regular fa-square">
+            </i>${item.description}</button>
+            <button class="move-item">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>`;
+    todoContainer.insertBefore(li, todoContainer.children[item.index]);
+  });
+};
+populateList();

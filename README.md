@@ -1,5 +1,6 @@
 # Microverse-to-do-list
-<img width="701" alt="Screen Shot" src="https://user-images.githubusercontent.com/53530780/177532945-33ff953f-1af1-4ff1-9a1f-422496c00a66.png">
+<img width="734" alt="Screen Shot 2022-07-07 at 1 29 47 AM" src="https://user-images.githubusercontent.com/53530780/177643753-2e9f7502-5e76-4f73-9379-e5ac7bc7d207.png">
+
 
 
 > A simple ToDo list app using ES6 and webpack. This is a Microverse project.

@@ -1,7 +1,9 @@
 import './style.css';
 import Tasks from './tasks.js';
+import Status from './status.js';
 
 const tasks = new Tasks();
+const status = new Status();
 
 tasks.populateList();
 
@@ -17,3 +19,5 @@ const refreshBtn = document.querySelector('#refresh-list');
 refreshBtn.addEventListener('click', () => {
   document.location.reload();
 });
+
+status.clearCompleted(tasks.tasksArray);

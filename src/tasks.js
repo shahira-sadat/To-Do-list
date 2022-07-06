@@ -26,5 +26,21 @@ export default class Tasks {
             });
         });
 
+        const editInput = document.querySelectorAll('.todo-item');
+        editInput.forEach((input, index) => {
+            input.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter' && input.value) {
+                    this.update(input.value, index);
+                }
+            });
+            input.addEventListener('change', () => {
+                if (input.value) {
+                    this.update(input.value, index);
+                }
+            });
+        });
     }
-}
+
+
+    }
+

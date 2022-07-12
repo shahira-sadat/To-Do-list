@@ -45,4 +45,4 @@ const dragItem = () => {
     });
   });
 };
-export default (dragItem); 
+export default (dragItem);

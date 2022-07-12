@@ -64,13 +64,6 @@ main {
   border-bottom: 1px solid #e9ecef;
 }
 
-/* .todo-item {
-  border: none;
-  outline: none;
-  font-size: 17px;
-  font-family: inherit;
-} */
-
 #todo-list li div {
   display: flex;
   align-items: center;
@@ -79,7 +72,7 @@ main {
 .todo-input {
   border: none;
   outline: none;
-  font-size: 17px;
+  font-size: 15px;
   font-family: inherit;
   align-self: flex-start;
 }
@@ -133,4 +126,8 @@ i {
 
 .move-task {
   cursor: move;
+}
+
+.dragging {
+  border: 1px solid #a5a58d !important;
 }

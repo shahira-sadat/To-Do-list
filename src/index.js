@@ -20,4 +20,4 @@ refreshBtn.addEventListener('click', () => {
   document.location.reload();
 });
 
-status.clearCompleted(tasks.tasksArray);
+status.clearCompleted(tasks);

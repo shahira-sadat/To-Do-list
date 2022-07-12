@@ -1,4 +1,5 @@
 import Status from './status.js';
+import dragItem from './dragItems.js';
 
 const status = new Status();
 

@@ -1,10 +1,18 @@
 body {
   margin: 0;
-  height: 100vh;
-  background-color: #e9ecef;
   font-family: sans-serif;
   box-sizing: border-box;
   padding: 130px 0;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #ffffff3d;
+  background-image: url(https://source.unsplash.com/1200x1200/?abstract,colors,patterns,textures);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main {

@@ -1,10 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const glob = require('glob');
 
 module.exports = {
   mode: 'development',
 
-  entry: './src/index.js',
+  entry: glob.sync('./src/*.js'),
 
   devServer: {
     static: './dist',
@@ -18,7 +19,7 @@ module.exports = {
 
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: `${__dirname}/dist`,
     clean: true,
   },
 
